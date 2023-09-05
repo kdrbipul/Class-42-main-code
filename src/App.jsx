@@ -6,6 +6,7 @@ import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Main from './components/Layout/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UserDetails from './components/UserDetails/UserDetails';
 
 function App() {
   
@@ -18,6 +19,11 @@ function App() {
           path:'/',
           element:<Home></Home>,
           loader: ()=> fetch('https://jsonplaceholder.typicode.com/users')
+        },
+        {
+          path:'/users/:id',
+          element:<UserDetails></UserDetails>,
+          loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
         },
         {
           path:'/about',

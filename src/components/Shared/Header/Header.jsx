@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -13,18 +13,18 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+          <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/about">About</Link>
+          <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/contact">Contact</Link>
+          <NavLink className="nav-link active" aria-current="page" to="/contact">Contact</NavLink>
         </li>
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-warning" type="submit">Search</button>
       </form>
     </div>
   </div>
